@@ -28,6 +28,7 @@ theme:
 
 nav:
     - 主页: index.md
+    - fy: qqq/q.md
 
 plugins:
   - mermaid2:
