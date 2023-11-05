@@ -27,10 +27,10 @@ theme:
   language: zh
 
 nav:
-    - 主页: index.md
-    - fy:
-      - fy1: qqq/q.md
-      - fy2: qqq/qq.md
+  - 主页: index.md
+  - fy:
+    - fy1: qqq/q.md
+    - fy2: qqq/qq.md
 
 plugins:
   - mermaid2:
