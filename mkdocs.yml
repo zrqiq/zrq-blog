@@ -29,8 +29,8 @@ theme:
 nav:
   - 主页: index.md
   - 副页:
-    - 副页1: qqq/q.md
-    - 副页2: qqq/qq.md
+    - linux: qqq/q.md
+    - C语言: qqq/qq.md
 
 plugins:
   - mermaid2:
