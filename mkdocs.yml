@@ -31,7 +31,7 @@ nav:
   - 副页:
     - Linux: qqq/qq.md
     - vim: qqq/q.md
-    - C语言：qqq/x.md
+    - C语言: qqq/x.md
 plugins:
   - mermaid2:
       arguments:
