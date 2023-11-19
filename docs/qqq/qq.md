@@ -20,4 +20,4 @@
 
 ### GNU/Linux
 
-![picture]![image-20231119223508772](/home/zrq/.config/Typora/typora-user-images/image-20231119223508772.png)
+![1](./1/1.jpg)
