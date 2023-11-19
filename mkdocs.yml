@@ -32,6 +32,7 @@ nav:
     - Linux: qqq/qq.md
     - vim: qqq/q.md
     - C语言: qqq/x.md
+  - 发疯日常: sb.md
 plugins:
   - mermaid2:
       arguments:
