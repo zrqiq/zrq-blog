@@ -17,4 +17,7 @@
    3.GUI Desktop环境
 
    4.Application应用
+   
+- GNU/Linux
 
+![image-20231119223508772](/home/zrq/.config/Typora/typora-user-images/image-20231119223508772.png)
