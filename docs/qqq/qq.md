@@ -8,6 +8,8 @@
 
 2.Linux GUI - > Shell
 
+> GUI可理解为桌面程序
+
 ### Linux 是一个操作系统 其分为四个部分
 
 1.Linux kernel(内核)
@@ -21,3 +23,55 @@
 ### GNU/Linux
 
 ![1](./1/1.jpg)
+
+
+
+### Linux内核
+
+1.硬件设备管理使用
+
+2.软件程序（系统）------->操作软件
+
+3.系统内存
+
+4.文件管理（保存文件，删除文件，修改文件......）
+
+### 文件系统
+
+读，写的标准
+
+> 不同文件系统有不同的读写标准
+
+```
+Windows常用文件系统类型：NTFS
+Linux常用文件系统类型：ext,ext2,ext3,ext4(最常用),hpfs,iso9660,JFS,minix,msdos,ncpfs,nfs,ntfs,proc,Reiserfs,smb,sysv,umsdos,vfat(通常是引导使用),XFS,xiafs
+(去企业面试可能会被问)
+```
+
+### GNU组织
+
+Unix上具有的一些软件，Linux内核本身没有，所以GNU他们模仿Unix,为Linux写了一些必要的软件
+
+- GNU核心：
+
+原本在Unix上的一些命令和工具，被模仿（移植）到了Linux上。
+
+供Linux使用的这套工具：coreutils
+
+coreutilities软件包：
+
+1.用来处理文本的工具
+
+2.用来操作文本的工具
+
+3.用来管理进程的工具
+
+- shell
+
+shell提供给用户使用的软件：用户拿它来使用电脑，并且和电脑交互。
+
+命令行壳层提供一个命令行界面（CLI）;而图形壳层提供一个图形用户界面（GUI）。
+
+linux shell--->CLI    Command-Line-Interface
+
+ 
