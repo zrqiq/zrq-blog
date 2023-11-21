@@ -66,12 +66,67 @@ coreutilities软件包：
 
 3.用来管理进程的工具
 
-- shell
+- shell 
 
 shell提供给用户使用的软件：用户拿它来使用电脑，并且和电脑交互。
 
 命令行壳层提供一个命令行界面（CLI）;而图形壳层提供一个图形用户界面（GUI）。
 
+即Shell分为两大类：
+
+1.图形界面Shell  (GUI Shell)
+
+2.命令行界面Shell (GLI Shell)
+
 linux shell--->CLI    Command-Line-Interface
 
+### GLI shell
+
+bash shell   基础shell
+
+zsh(包含ash,korn,tcsh)
+
+> MacOS（苹果系统）----->Unix专业人选择
+
  
+
+### Linux  GUI发展历史
+
+1.X Windows
+
+2.KDE(windows,MacOS使用系统)
+
+3.GNOME
+
+4.Unity
+
+
+
+### shell
+
+> 输入一条命令后按回车
+>
+> $ 表示当前要输入命令了
+
+入门命令：
+
+```
+ls 显示当前目录所有文件夹（不包括隐藏文件夹）
+
+ls -a 显示带点的隐藏文件
+
+```
+
+### 终端
+
+zrq @ q ：~ $ 的含义
+
+用户名@机器名 当前所在目录 等待用户输入
+
+- @ 前是用户名
+
+- @ 后是机器命（计算机名）
+
+- ~ 代表用户home目录
+
+- $ 表示等待用户输入
