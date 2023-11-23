@@ -10,6 +10,8 @@
 
 > GUI可理解为桌面程序
 
+---
+
 ### Linux 是一个操作系统 其分为四个部分
 
 1.Linux kernel(内核)
@@ -20,11 +22,15 @@
 
 4.Application应用
 
+---
+
 ### GNU/Linux
 
 ![1](./1/1.jpg)
 
 
+
+---
 
 ### Linux内核
 
@@ -35,6 +41,8 @@
 3.系统内存
 
 4.文件管理（保存文件，删除文件，修改文件......）
+
+---
 
 ### 文件系统
 
@@ -47,6 +55,8 @@ Windows常用文件系统类型：NTFS
 Linux常用文件系统类型：ext,ext2,ext3,ext4(最常用),hpfs,iso9660,JFS,minix,msdos,ncpfs,nfs,ntfs,proc,Reiserfs,smb,sysv,umsdos,vfat(通常是引导使用),XFS,xiafs
 (去企业面试可能会被问)
 ```
+
+---
 
 ### GNU组织
 
@@ -80,6 +90,8 @@ shell提供给用户使用的软件：用户拿它来使用电脑，并且和电
 
 linux shell--->CLI    Command-Line-Interface
 
+---
+
 ### GLI shell
 
 bash shell   基础shell
@@ -88,7 +100,7 @@ zsh(包含ash,korn,tcsh)
 
 > MacOS（苹果系统）----->Unix专业人选择
 
- 
+ --- 
 
 ### Linux  GUI发展历史
 
@@ -100,7 +112,7 @@ zsh(包含ash,korn,tcsh)
 
 4.Unity
 
-
+---
 
 ### shell
 
@@ -117,6 +129,8 @@ ls -a 显示带点的隐藏文件
 
 ```
 
+---
+
 ### 终端
 
 zrq @ q ：~ $ 的含义
@@ -130,6 +144,8 @@ zrq @ q ：~ $ 的含义
 - ~ 代表用户home目录
 
 - $ 表示等待用户输入
+
+---
 
 ### ls 系列命令
 
@@ -160,7 +176,7 @@ $ du -sh * | sort -h # 按文件大小排序(同上)
 
 2.输入clear命令
 
-
+---
 
 > Linux一切皆文件
 
