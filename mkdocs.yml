@@ -28,7 +28,7 @@ theme:
 
 nav:
   - 主页: index.md
-    - 友链: friends.md
+  - 友链: friends.md
   - 学习记录:
     - Linux: qqq/qq.md
     - vim: qqq/q.md
