@@ -274,3 +274,77 @@ D:\Linux\2K版\000.Linux初步认识\系统的认识.ev4
 我现在在 D:\Linux\2K版 这个位置
 
 那么我的相对路径为\000.Linux初步认识\系统的认识.ev4
+
+### touch 命令
+
+> touch命令 有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。
+
+```
+touch ex2
+在当前目录下建立一个空文件ex2
+
+touch file{1..5}.txt
+
+批量创建文件
+```
+
+### cp  命令
+
+> 建议新手强制加上-i
+
+cp用法：cp 源文件 目标文件（cp 你想复制的文件 你想复制到哪）
+
+- 源文件：制定源文件列表。
+- 目标文件：指定目标文件。
+
+默认情况下，cp命令不能复制目录，如果要复制目录，则必须使用-R选项
+
+```
+-i：覆盖既有文件之前先询问用户；
+-R/r：递归处理，将指定目录下的所有文件与子目录一并处理
+```
+
+如果把一个文件复制到一个目标文件中，而目标文件已经存在，那么，该目标文件的内容将被破坏。(覆盖性)
+
+此命令中所有参数既可以是绝对路径名，也可以是相对路径名。通常会用到点.或点点..的形式。
+
+所有目标文件指定的目录必须是己经存在的，cp命令不能创建目录。如果没有文件复制的权限，则系统会显示出错信息。
+
+> cp 既可以复制文件，也可以复制文件夹
+
+---
+
+2023.12.3 故障
+
+不小心把文件remove（永久删除）了怎么办？
+
+下面以我的博客文件为例，来告诉大家该如何修复
+
+```
+首先在之前放置博客文件的文件夹下面新建一个博客文件夹，然后进去，进去之后打开终端执行两条命令（以我的为例）
+
+git clone [git@github.com:](mailto:git@github.com:)zrqiq/zrqiq.git
+
+git clone [git@github.com:](mailto:git@github.com:)zrqiq/zrq-blog.git
+
+这样两个文件夹就都下载回来了（zrqiq和zrq-blog）
+
+但是还得配置一下
+
+在zrq-blog文件夹下：
+
+- git remote add blog [git@github.com:](mailto:git@github.com:)zrqiq/zrq-blog.git
+- git config --global user.email "这里写你的邮箱"
+- git config --global user.name "这里写你github的用户名"
+
+在zrqiq文件夹下：
+
+- cp ../zrqiq-blog/auto-update-this-repo.sh ./
+- git remote add zrqiq [git@github.com:](mailto:git@github.com:)zrqiq/zrqiq.git
+- git config --global user.email "这里写你的邮箱"
+- git config --global user.name "这里写你github的用户名"
+- 最后打开文件夹内的auto-update-this-repo.sh文件，将最后一行的blog改为zrqiq
+
+```
+
+然后就ok了！感谢我学长！！！（大家别轻易尝试，对心脏不好）
