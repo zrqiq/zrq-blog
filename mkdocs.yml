@@ -32,7 +32,7 @@ nav:
   - 学习记录:
     - Linux: qqq/qq.md
     - vim: qqq/q.md
-    - C语言: qqq/x.md
+    - learn C: qqq/x.md
   - 发疯日常: sb.md
 plugins:
   - mermaid2:
