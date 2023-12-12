@@ -28,7 +28,6 @@ theme:
 
 nav:
   - 主页: index.md
-    - 友链: friends.md
   - 学习记录:
     - Linux: qqq/qq.md
       - vim: qqq/q.md
@@ -36,6 +35,7 @@ nav:
   - 发疯日常: 
     - 2023: years/sb.md
     - 2024: years/2024.md
+  - 友链: friends.md
 plugins:
   - mermaid2:
       arguments:
