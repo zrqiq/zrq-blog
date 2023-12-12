@@ -28,12 +28,14 @@ theme:
 
 nav:
   - 主页: index.md
-  - 友链: friends.md
+    - 友链: friends.md
   - 学习记录:
     - Linux: qqq/qq.md
-    - vim: qqq/q.md
+      - vim: qqq/q.md
     - learn C: qqq/x.md
-  - 发疯日常: sb.md
+  - 发疯日常: 
+    - 2023: years/sb.md
+    - 2024: years/2024.md
 plugins:
   - mermaid2:
       arguments:
