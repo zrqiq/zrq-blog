@@ -409,7 +409,7 @@ int main(int argc, char *argv[])
 
 ```
 
-#include <ctype.h> 是C语言中的一个预处理指令。当使用这个指令时，它告诉编译器包含ctype.h这个标准库头文件。
+include <ctype.h> 是C语言中的一个预处理指令。当使用这个指令时，它告诉编译器包含ctype.h这个标准库头文件。
 
 ctype.h库提供了很多有用的函数，这些函数用于测试和操作C语言中的字符。例如：
 
