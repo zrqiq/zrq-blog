@@ -31,7 +31,8 @@ nav:
   - 学习记录:
     - Linux: qqq/qq.md
     - vim: qqq/q.md
-    - learn C: qqq/x.md
+    - Learn C: qqq/x.md
+    - 入门书籍: qqq/kws.md
   - 发疯日常:
     - 2023: years/sb.md
     - 2024: years/2024.md

@@ -409,9 +409,9 @@ int main(int argc, char *argv[])
 
 ```
 
-include <ctype.h> 是C语言中的一个预处理指令。当使用这个指令时，它告诉编译器包含ctype.h这个标准库头文件。
+"#include <ctype.h>" 是C语言中的一个预处理指令。当使用这个指令时，它告诉编译器包含ctype.h这个标准库头文件。
 
-ctype.h库提供了很多有用的函数，这些函数用于测试和操作C语言中的字符。例如：
+"ctype.h"库提供了很多有用的函数，这些函数用于测试和操作C语言中的字符。例如：
 
 isalpha()：检查字符是否是字母。
 isdigit()：检查字符是否是数字。
@@ -590,36 +590,36 @@ struct Person {
     int age;
     int height;
     int weight;
-};
+};//这里定义了一个名为Person的结构体。这个结构体有四个成员：一个指向字符的指针name，以及三个整型成员age、height和weight。这表示一个人有名字、年龄、身高和体重四个属性。
 
 struct Person *Person_create(char *name, int age, int height, int weight)
 {
-    struct Person *who = malloc(sizeof(struct Person));
-    assert(who != NULL);
+    struct Person *who = malloc(sizeof(struct Person));//// 分配内存给Person结构体
+    assert(who != NULL);// 断言检查内存是否成功分配 
 
-    who->name = strdup(name);
-    who->age = age;
-    who->height = height;
-    who->weight = weight;
+    who->name = strdup(name);// 为名字分配内存并复制字符串  
+    who->age = age;// 设置年龄属性  
+    who->height = height;// 设置身高属性  
+    who->weight = weight; //设置体重属性  
 
-    return who;
-}
+    return who;// 返回指向新创建的Person对象的指针  
+}//这个函数用于创建一个新的Person对象。它首先使用malloc为Person结构体分配内存，然后使用strdup为名字分配内存并复制字符串。接下来，它设置对象的属性，并返回指向新创建的对象的指针。如果任何步骤失败（例如，内存分配失败），则assert将触发一个错误并终止程序。
 
-void Person_destroy(struct Person *who)
-{
-    assert(who != NULL);
+void Person_destroy(struct Person *who)  
+{  
+    assert(who != NULL);  // 断言检查对象是否非空  
+  
+    free(who->name);  // 释放名字的内存  
+    free(who);  // 释放Person对象的内存  
+}//这个函数用于释放由Person_create函数分配的内存。它首先检查对象是否非空，然后释放名字的内存和Person对象的内存。同样，如果对象为NULL，则断言将触发一个错误并终止程序。
 
-    free(who->name);
-    free(who);
-}
-
-void Person_print(struct Person *who)
-{
-    printf("Name: %s\n", who->name);
-    printf("\tAge: %d\n", who->age);
-    printf("\tHeight: %d\n", who->height);
-    printf("\tWeight: %d\n", who->weight);
-}
+void Person_print(struct Person *who)  
+{  
+    printf("Name: %s\n", who->name);  // 打印名字  
+    printf("\tAge: %d\n", who->age);  // 打印年龄  
+    printf("\tHeight: %d\n", who->height);  // 打印身高  
+    printf("\tWeight: %d\n", who->weight);  // 打印体重  
+}//这个函数用于打印Person对象的所有属性。它使用printf函数来显示名字、年龄、身高和体重。注意，这里使用了制表符\t来对输出进行格式化。
 
 int main(int argc, char *argv[])
 {
@@ -652,14 +652,138 @@ int main(int argc, char *argv[])
     Person_destroy(frank);
 
     return 0;
-}
+}//在主函数中，首先创建了两个Person对象（Joe和Frank），并使用Person_print函数打印出他们的信息。然后使每个人的年龄增加20岁，并更新其他属性。最后，使用Person_destroy函数销毁这两个对象，以释放分配给他们的内存。
 ```
+
+> x->y是(*x).y的简写。
+
+
 
 这段代码用于创建一个Person结构体来表示一个人，包括名字、年龄、身高和体重。该程序包括以下部分：
 
 定义结构体：定义了一个名为Person的结构体，包含四个成员变量：一个指向字符的指针name，表示名字；三个整型变量age、height和weight，分别表示年龄、身高和体重。
+
 创建结构体：Person_create函数用于创建一个新的Person结构体。它接收一个名字、年龄、身高和体重作为参数，并动态分配内存来存储这些信息。该函数返回一个指向新创建的Person结构体的指针。
+
 销毁结构体：Person_destroy函数用于释放由Person_create函数分配的内存。它接收一个指向Person结构体的指针，并释放该结构体和其成员变量所占用的内存。
+
 打印结构体：Person_print函数用于打印Person结构体的信息。它接收一个指向Person结构体的指针，并打印出该结构体的所有成员变量的值。
+
 主函数：在主函数中，首先使用Person_create函数创建两个Person结构体，然后打印出它们的内存地址以及它们的成员变量的值。接着，让这两个人的年龄增加20岁，身高减少2厘米，体重增加40磅和20磅，并再次打印出他们的信息。最后，使用Person_destroy函数销毁这两个结构体以释放内存。
+
 这个程序演示了如何使用C语言中的结构体和动态内存分配来创建和操作对象。注意，这个程序使用了断言(assert)来检查内存分配是否成功，如果内存分配失败（例如，由于内存不足），则程序会立即终止。
+
+
+
+在这段代码中，包含了三个C语言标准库的头文件：<assert.h>、<stdlib.h> 和 <string.h>。这些头文件为C程序提供了各种常用的功能和宏定义。
+
+**"<assert.h>"：**
+**这个头文件提供了assert宏，用于在调试时检查程序中的断言（条件）。如果断言失败（即条件为假），则程序会在该点终止，并显示一条包含文件名和行号的错误消息。assert通常用于捕获那些“这绝对不可能发生”的情况。如果发生了，就意味着程序中有错误。**
+
+"<stdlib.h>"：
+这个头文件包含了一系列关于程序通用工具函数的声明，例如内存分配、随机数生成、系统退出等。
+在代码中，这个头文件是必需的，因为它声明了malloc和free函数，这两个函数用于动态内存管理。
+
+"<string.h>"：
+这个头文件包含了一系列处理C风格字符串（即字符数组）的函数。例如，字符串拷贝（strcpy）、字符串连接（strcat）、字符串比较（strcmp）以及字符串长度计算（strlen）等。
+在代码中，<string.h> 是为了使用 strdup 函数，这个函数会分配足够的内存来容纳一个新的字符串，并将一个已存在的字符串复制到新分配的内存中。
+
+
+
+```
+malloc是C语言中的一个标准库函数，用于动态内存分配。当你在程序中需要一块内存，但不知道需要多少，或者需要在运行时确定内存的大小时，可以使用malloc。
+
+malloc函数从堆中分配指定字节数的未初始化的内存，并返回一个指向它的指针。如果分配成功，则返回非空指针；如果分配失败，则返回NULL。
+
+使用malloc的例子：
+
+#include <stdio.h>  
+#include <stdlib.h>  
+  
+int main() {  
+    int *ptr = (int*) malloc(sizeof(int));  // 为一个int分配内存  
+    if (ptr == NULL) {  
+        printf("Memory allocation failed!\n");  
+        return 1;  // 返回错误代码  
+    }  
+    *ptr = 10;  // 存储值10到这块内存中  
+    printf("Value of ptr: %d\n", *ptr);  // 打印值10  
+    free(ptr);  // 释放内存  
+    return 0;  
+}
+注意：使用malloc分配的内存必须手动释放，使用free函数。否则会导致内存泄漏。
+```
+
+
+
+```
+结构体（struct）是一个用户定义的数据类型，它允许将多个不同的数据项组合到一个单一的变量中。通过结构体，可以创建包含多个不同类型数据的复杂数据结构。
+
+定义结构体：
+
+定义一个结构体的一般语法如下：
+
+struct 结构体名称 {  
+    成员类型1 成员名称1;  
+    成员类型2 成员名称2;  
+    ...  
+    成员类型N 成员名称N;  
+};//不可以漏掉分号
+
+例如，如果我们想创建一个结构体来存储一个人的信息，我们可以这样定义：
+
+struct Person {  
+    char name[50];  
+    int age;  
+    float height;  
+};
+这个结构体定义了一个名为Person的结构体类型，它有三个成员：一个字符数组name、一个整数age和一个浮点数height。
+
+使用结构体：
+
+一旦定义了结构体，您就可以创建该类型的变量并为其成员赋值。例如：
+
+struct Person john;  // 创建一个Person类型的变量john  
+john.age = 25;  // 为john的age成员赋值  
+strcpy(john.name, "John Doe");  // 使用strcpy函数为john的name成员赋值  
+john.height = 1.75;  // 为john的height成员赋值
+
+注意事项：
+结构体的主要用途是组织不同类型的数据，使它们成为一个整体。
+当您为结构体成员赋值时，需要使用.运算符来访问该成员。
+您可以使用sizeof运算符来获取结构体的大小。例如：sizeof(john)将返回整个结构体的大小（以字节为单位）。
+```
+
+
+
+```
+strdup 是一个 C 语言库函数，用于复制一个字符串。它的原型是：
+
+char *strdup(const char *s);
+这个函数会返回一个指向新分配的字符串的指针，这个字符串是 s 的一个副本。新字符串的内存空间是通过 malloc 分配的，因此需要使用 free 来释放。
+
+下面是一个使用 strdup 的简单示例：
+
+#include <stdio.h>  
+#include <string.h>  
+#include <stdlib.h>  
+  
+int main() {  
+    const char *original = "Hello, World!";  
+    char *copy = strdup(original);  
+    if (copy != NULL) {  
+        printf("Original: %s\n", original);  
+        printf("Copy: %s\n", copy);  
+        free(copy);  // 释放内存  
+    } else {  
+        printf("strdup failed to allocate memory.\n");  
+    }  
+    return 0;  
+}
+注意：在使用 strdup 时，必须确保在不再需要复制的字符串时调用 free 来释放内存，以避免内存泄漏。
+```
+
+
+
+### 练习17
+
