@@ -1,0 +1,1622 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../q/">
+      
+      
+        <link rel="next" href="../kws/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>Learn C - zzzengrqi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../mkdocs/css/no-footer.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#learn-c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="http://haohaha.cn" title="zzzengrqi" class="md-header__button md-logo" aria-label="zzzengrqi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zzzengrqi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learn C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../qq/" class="md-tabs__link">
+          
+  
+    
+  
+  学习记录
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../years/sb/" class="md-tabs__link">
+          
+  
+    
+  
+  发疯日常
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../friends/" class="md-tabs__link">
+        
+  
+    
+  
+  友链
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="http://haohaha.cn" title="zzzengrqi" class="md-nav__button md-logo" aria-label="zzzengrqi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    zzzengrqi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../q/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Learn C
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Learn C
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习15
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入门书籍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    发疯日常
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            发疯日常
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../years/sb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../years/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../friends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    友链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习11
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习12
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习13
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习15
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习17
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="learn-c">Learn C</h1>
+<h3 id="1">练习1</h3>
+<pre><code>touch ex1.c
+
+vim ex1.c（CFLAGS=&quot;-Wall&quot; make ex1）
+
+make ex1
+
+./ex1
+</code></pre>
+<blockquote>
+<p>make ex1的含义</p>
+<p>文件ex1存在吗？
+没有。好的，有没有其他文件以ex1开头？
+有，叫做ex1.c。我知道如何构建.c文件吗？
+是的，我会运行命令cc ex1.c -o ex1来构建它。
+我将使用cc从ex1.c文件来为你构建ex1。</p>
+</blockquote>
+<pre><code>int main(int argc, char *argv[])
+{
+    puts(&quot;Hello world.&quot;);
+
+    return 0;
+}
+</code></pre>
+<p>我发现练习1使用puts 和printf 都可以，都会在屏幕上打印相应的内容</p>
+<p>但是会有警告，因为缺少头文件（可能是我之前弄过练习2，然后编译器就会给出详细警告），但是依旧可以执行</p>
+<h3 id="2">练习2</h3>
+<p>首先，创建文件并写入以下内容：</p>
+<pre><code>CFLAGS=-Wall -g
+
+clean:
+    rm -f ex1(注意是TAB键，不是空格)
+</code></pre>
+<p>将文件在你的当前文件夹上保存为Makefile</p>
+<p>确保它和的ex1.c文件在相同的目录中，之后运行以下命令：</p>
+<pre><code>$ make clean
+$ make ex1
+</code></pre>
+<p>然后编译器就会给出警告（缺少头文件）</p>
+<h3 id="4">练习4</h3>
+<blockquote>
+<p>Valgrind</p>
+<p>Valgrind是一个运行你的程序的程序，并且随后会报告所有你犯下的可怕错误</p>
+</blockquote>
+<p>我们该如何下载呢</p>
+<pre><code>1) #Download it (use wget if you don't have curl)
+
+curl -O http://valgrind.org/downloads/valgrind-3.6.1.tar.bz2
+
+use md5sum to make sure it matches the one on the site
+
+md5sum valgrind-3.6.1.tar.bz2
+
+2) #Unpack it.
+
+tar -xjvf valgrind-3.6.1.tar.bz2
+
+cd into the newly created directory
+
+cd valgrind-3.6.1
+
+3) #configure it
+
+./configure
+
+4) #make it
+
+make
+
+5) #install it (need root)
+
+sudo make install
+</code></pre>
+<p>这个工具我自己下载过很多遍，删了下，下了删，反反复复，但是总是会在第二步失败，我也不知道为什么，今天又下载了一遍，还是和之前一样只成功了第一步，但是我完全可以使用这个工具，他也会像电子书里面的教程一样，完全是一个好工具，Valgrind会明确地告诉你程序中的每个错误都在哪儿</p>
+<h3 id="6">练习6</h3>
+<p>1、格式化输出整型
+d 格式，用来输出十进制整数。</p>
+<p>%d：按整型数据的实际长度输出；
+%md：m为指定的输出宽度。如果数据的位数小于m，则左端补空格；若大于m，则按实际位数输出；
+%0md：同上，但这里如果数据的位数小于m，则左端补0；若大于m，则按实际位数输出。</p>
+<p>2、格式化输出浮点型
+f 格式，用来输出小数。</p>
+<p>%f：整数部分全部输出，并输出6位小数；
+%.nf：整数部分全部输出，并输出n位小数；
+%m.nf：输出共占m列，n位小数，若数值宽度小于m则左端补空格。</p>
+<p>3、格式化输出字符串
+s 格式，用来输出字符串。</p>
+<p>%s：输入全部字符串；
+%ms：输出的字符串共占m列，若字符串本身的长度小于m，则左补空格；若字符串本身的长度大于m，则全部输出。</p>
+<pre><code>
+a, A    #以十六进制形式输出浮点数(C99 新增）
+d       #以十进制形式输出带符号整数(正数不输出符号)
+o       #以八进制形式输出无符号整数(不输出前缀0)
+x,X     #以十六进制形式输出无符号整数(不输出前缀Ox)
+u       #以十进制形式输出无符号整数
+f       #以小数形式输出单、双精度实数
+e,E     #以指数形式输出单、双精度实数
+g,G     #以%f或%e中较短的输出宽度输出单、双精度实数
+c       #输出单个字符
+s       #输出字符串
+p       #输出指针地址
+lu      #32位无符号整数
+llu     #64位无符号整数
+</code></pre>
+<h3 id="7">练习7</h3>
+<p>unsigned</p>
+<pre><code>unsigned意为“没有标记过的”，在C语言中表示无符号的，与关键字signed对应
+
+这个关键字在很多头文件的变量定义中还是很常见的，一般用在整数类型的符号说明处
+
+unsigned的作用是：声明无符号的整数类型。
+unsigned的使用和signed类似，unsigned一般加在int等整数类型名称前：
+
+/* unsigned可以修饰的几种类型 */
+unsigned int a;             /* 无符号整型 */
+unsigned short b;           /* 无符号短整型 */
+unsigned long c;            /* 无符号长整型 */
+unsigned long long d;       /* 无符号long long类型 */
+</code></pre>
+<p>为什么char 和int 可以相乘？</p>
+<blockquote>
+<p>字符就是整数
+字符和整数没有本质的区别。可以给 char变量一个字符，也可以给它一个整数；反过来，可以给 int变量一个整数，也可以给它一个字符。</p>
+<p>char 变量在内存中存储的是字符对应的 ASCII 码值。如果以 %c 输出，会根据 ASCII码表转换成对应的字符，如果以 %d 输出，那么还是整数。</p>
+<p>int 变量在内存中存储的是整数本身，如果以 %c 输出时，也会根据 ASCII码表转换成对应的字符。</p>
+<p>也就是说，ASCII 码表将整数和字符关联起来了</p>
+</blockquote>
+<h3 id="8">练习8</h3>
+<p>将full_name最后的'\0'去掉，并重新运行它，在valgrind下再运行一遍,此时会在屏幕上显示一大串我看不懂的东西。</p>
+<p><img alt="去除\0" src="/home/zrq/.config/Typora/typora-user-images/image-20240123134559452.png" title="去除\0" /></p>
+<h3 id="9">练习9</h3>
+<p>字符串后面必须有"\0",否则程序就会崩溃</p>
+<h3 id="10">练习10</h3>
+<pre><code>for循环的格式是这样的：
+
+for(INITIALIZER; TEST; INCREMENTER) {
+    CODE;
+}
+</code></pre>
+<p>NULL在C语言中是什么东西？</p>
+<blockquote>
+<p>大多数人的回答是："NULL就是系统定义特殊的0,把你初始化的指针指向它，可以防止“野指针”的恶果。"</p>
+</blockquote>
+<p>关于NULL,我查到一篇有关<a href="https://blog.csdn.net/fovwin/article/details/8057854">NULL习题</a>的文章，我觉得挺好的</p>
+<h3 id="11">练习11</h3>
+<blockquote>
+<p>在C语言中，实际上没有真正的“布尔”类型，而是用一个整数来代替，0代表false，其它值代表true。</p>
+<p>```
+在C语言中，实际上没有真正的“布尔”类型，而是用一个整数来代替，0代表false，其它值代表true。</p>
+<p>你可以看到while循环的语法更加简单：</p>
+<p>while(TEST) {
+    CODE;
+}
+只要TEST为true（非0），就会一直运行CODE中的代码。这意味着如果要达到和for循环同样的效果，我们需要自己写初始化语句，以及自己来使i增加。</p>
+<p>```</p>
+</blockquote>
+<h3 id="12">练习12</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    int i = 0;
+
+    if(argc == 1) {
+        printf(&quot;You only have one argument. You suck.\n&quot;);
+    } else if(argc &gt; 1 &amp;&amp; argc &lt; 4) {
+        printf(&quot;Here's your arguments:\n&quot;);
+
+        for(i = 0; i &lt; argc; i++) {
+            printf(&quot;%s &quot;, argv[i]);
+        }
+        printf(&quot;\n&quot;);
+    } else {
+        printf(&quot;You have too many arguments. You suck.\n&quot;);
+    }
+
+    return 0;
+}
+</code></pre>
+<p>这个程序的主要目的是根据用户提供的命令行参数数量来给出相应的提示。如果用户只提供一个参数（通常是程序名），它会说用户只有一个参数；如果用户提供了2到3个参数，它会列出这些参数；如果用户提供了超过3个参数，它会说用户有太多的参数。</p>
+<pre><code>if语句的格式为：
+
+if(TEST) {
+    CODE;
+} else if(TEST) {
+    CODE;
+} else {
+    CODE;
+}
+</code></pre>
+<p>关于运算符，我找到一篇非常棒的<a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/boolean-logical-operators">文章</a>，里面讲的非常清楚</p>
+<h3 id="13">练习13</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    if(argc != 2) {
+        printf(&quot;ERROR: You need one argument.\n&quot;);
+        // this is how you abort a program
+        return 1;
+    }
+
+    int i = 0;
+    for(i = 0; argv[1][i] != '\0'; i++) {
+        char letter = argv[1][i];
+
+        switch(letter) {
+            case 'a':
+            case 'A':
+                printf(&quot;%d: 'A'\n&quot;, i);
+                break;
+
+            case 'e':
+            case 'E':
+                printf(&quot;%d: 'E'\n&quot;, i);
+                break;
+
+            case 'i':
+            case 'I':
+                printf(&quot;%d: 'I'\n&quot;, i);
+                break;
+
+            case 'o':
+            case 'O':
+                printf(&quot;%d: 'O'\n&quot;, i);
+                break;
+
+            case 'u':
+            case 'U':
+                printf(&quot;%d: 'U'\n&quot;, i);
+                break;
+
+            case 'y':
+            case 'Y':
+                if(i &gt; 2) {
+                    // it's only sometimes Y
+                    printf(&quot;%d: 'Y'\n&quot;, i);
+                }
+                break;
+
+            default:
+                printf(&quot;%d: %c is not a vowel\n&quot;, i, letter);
+        }
+    }
+
+    return 0;
+}
+</code></pre>
+<p>这段代码的主要功能是读取用户输入的字符串（作为命令行参数），并检查其中的每个字符是否为元音字母。如果是，它就输出该字符及其在字符串中的位置。</p>
+<p>和我自己所想代码不一样，我感觉主要是这个地方“int argc, char *argv[]”</p>
+<p>argc 是一个整数，表示命令行参数的数量；argv 是一个字符指针数组，包含所有的命令行参数。(这个地方是我之前学习c语言时候没见过的地方)</p>
+<blockquote>
+<p>在C语言中，int argc, char *argv[] 是用来从命令行接收参数的一种方法。它们是 main 函数的参数。</p>
+<p>int argc：这是一个整数，表示传递给程序的命令行参数的数量。
+char *argv[]：这是一个字符指针数组，用来存储传递给程序的命令行参数。
+当你在命令行上运行一个程序时，你可以传递一些参数给它。例如，如果你有一个名为 program 的程序，你可以这样运行它：</p>
+<p>bash
+./program arg1 arg2 arg3
+在这个例子中，argc 的值是4（包括程序名），而 argv 数组会包含这些字符串：</p>
+<p>c
+argv[0] = "./program"<br />
+argv[1] = "arg1"<br />
+argv[2] = "arg2"<br />
+argv[3] = "arg3"
+在C语言中，你可以使用这些参数来执行各种任务，例如读取配置文件、指定输入/输出文件等。</p>
+</blockquote>
+<pre><code>swicth语句工作原理的一个深究，然而实际操作中你只需要记住下面几条简单的原则：
+
+总是要包含一个default:分支，可以让你接住被忽略的输入。
+不要允许“贯穿”执行，除非你真的想这么做，这种情况下最好添加一个//fallthrough的注释。
+一定要先编写case和break，再编写其中的代码。
+如果能够简化的话，用if语句代替。
+</code></pre>
+<blockquote>
+<p>破坏一个switch语句块太容易了。下面是一些方法，你可以挑一个来用：</p>
+<p>忘记写break，程序就会运行两个或多个代码块，这些都是你不想运行的。
+忘记写default，程序会在静默中忽略你所忘记的值。
+无意中将一些带有预料之外的值的变量放入switch中，比如带有奇怪的值的int。
+在switch中是否未初始化的值。(这些都是我们需要注意的点，作为初学者我们很容易忽视)</p>
+</blockquote>
+<h3 id="14">练习14</h3>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;ctype.h&gt;
+
+// forward declarations
+int can_print_it(char ch);
+void print_letters(char arg[]);
+
+void print_arguments(int argc, char *argv[])
+{
+    int i = 0;
+
+    for(i = 0; i &lt; argc; i++) {
+        print_letters(argv[i]);
+    }
+}
+
+void print_letters(char arg[])
+{
+    int i = 0;
+
+    for(i = 0; arg[i] != '\0'; i++) {
+        char ch = arg[i];
+
+        if(can_print_it(ch)) {
+            printf(&quot;'%c' == %d &quot;, ch, ch);
+        }
+    }
+
+    printf(&quot;\n&quot;);
+}
+
+int can_print_it(char ch)
+{
+    return isalpha(ch) || isblank(ch);
+}
+
+
+int main(int argc, char *argv[])
+{
+    print_arguments(argc, argv);
+    return 0;
+}
+
+</code></pre>
+<p>"#include <ctype.h>" 是C语言中的一个预处理指令。当使用这个指令时，它告诉编译器包含ctype.h这个标准库头文件。</p>
+<p>"ctype.h"库提供了很多有用的函数，这些函数用于测试和操作C语言中的字符。例如：</p>
+<p>isalpha()：检查字符是否是字母。
+isdigit()：检查字符是否是数字。
+isspace()：检查字符是否是空白字符（如空格、制表符、换行符等）。
+isupper()：检查字符是否是大写字母。
+islower()：检查字符是否是小写字母。
+这些函数通常用于字符分类，即确定一个字符属于哪个类别（如字母、数字、标点符号等）。</p>
+<p>定义了三个函数：can_print_it、print_letters 和 print_arguments。</p>
+<p>can_print_it(char ch)：检查字符 ch 是否是字母或空白字符。如果是，返回非零值；否则，返回零。
+print_letters(char arg[])：打印字符串 arg 中的所有字母和空白字符。
+print_arguments(int argc, char *argv[])：遍历命令行参数，并对每个参数调用 print_letters 函数。</p>
+<h3 id="15">练习15</h3>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    // create two arrays we care about
+    int ages[] = {23, 43, 12, 89, 2};
+    char *names[] = {
+        &quot;Alan&quot;, &quot;Frank&quot;,
+        &quot;Mary&quot;, &quot;John&quot;, &quot;Lisa&quot;
+    };
+
+    // safely get the size of ages
+    int count = sizeof(ages) / sizeof(int);
+    int i = 0;
+
+    // first way using indexing
+    for(i = 0; i &lt; count; i++) {
+        printf(&quot;%s has %d years alive.\n&quot;,
+                names[i], ages[i]);
+    }
+
+    printf(&quot;---\n&quot;);
+
+    // setup the pointers to the start of the arrays
+    int *cur_age = ages;
+    char **cur_name = names;
+
+    // second way using pointers
+    for(i = 0; i &lt; count; i++) {
+        printf(&quot;%s is %d years old.\n&quot;,
+                *(cur_name+i), *(cur_age+i));
+    }
+
+    printf(&quot;---\n&quot;);
+
+    // third way, pointers are just arrays
+    for(i = 0; i &lt; count; i++) {
+        printf(&quot;%s is %d years old again.\n&quot;,
+                cur_name[i], cur_age[i]);
+    }
+
+    printf(&quot;---\n&quot;);
+
+    // fourth way with pointers in a stupid complex way
+    for(cur_name = names, cur_age = ages;
+            (cur_age - ages) &lt; count;
+            cur_name++, cur_age++)
+    {
+        printf(&quot;%s lived %d years so far.\n&quot;,
+                *cur_name, *cur_age);
+    }
+
+    return 0;
+}
+</code></pre>
+<blockquote>
+<p>ex15.c:48-49</p>
+<p>cur_name和cur_age的值现在指向了相应数组中的一个元素，我们我可以通过<em>cur_name和</em>cur_age来打印它们，这里的意思是“cur_name和cur_age指向的值”。</p>
+</blockquote>
+<p>这段C语言代码主要演示了如何使用数组和指针来处理和访问数组中的数据。
+获取数组的大小：count 是 ages 数组的大小，通过 sizeof(ages) / sizeof(int) 计算得到。</p>
+<p>第一种方式：</p>
+<p>使用索引访问数组：使用传统的for循环和索引访问数组中的每个元素。</p>
+<p>第二种方式：</p>
+<p>使用指针访问数组：cur_age 和 cur_name 是指向数组的指针。</p>
+<p>使用指针通过解引用（*）来访问数组元素。</p>
+<p>第三种方式：</p>
+<p>直接使用指针访问：不需要额外的变量来存储指向数组的指针，可以直接使用 names[i] 和 ages[i] 来访问。</p>
+<p><strong>第四种方式：</strong></p>
+<p><strong>使用指针的复杂方法访问数组：使用指针进行循环，并通过解引用指针来访问元素。这种方式相对复杂，但也是一种可能的访问数组的方法。
+最后，返回0表示程序正常结束。</strong></p>
+<pre><code>在这个方法中，我们使用了两个指针cur_name和cur_age，它们分别指向names和ages数组的起始位置。然后，我们在循环中不断更新这两个指针的位置，直到它们指向数组的末尾。具体来说，cur_name = names 和 cur_age = ages 分别将两个指针指向各自数组的起始位置。在每次循环中，cur_name++ 和 cur_age++ 将指针向前移动一个位置。当 (cur_age - ages) &lt; count 这个条件不满足时，即当前指针位置超过或等于数组的长度时，循环结束。在每次循环中，通过解引用指针 *cur_name 和 *cur_age，我们可以获取到当前指针指向的元素值，即名字和年龄。然后，我们使用这些值来打印出相应的信息。这种方法虽然看起来比较复杂，但实际上它是在演示如何使用指针来遍历数组，这是C语言中一种常见的操作。通过这种方式，我们可以更加灵活地操作数组中的元素，而不仅仅是通过索引来访问它们。
+
+在C语言中，数组名本质上是指向数组第一个元素的指针。所以，当我们声明一个数组时，例如char *names[]，names实际上是一个指向数组第一个元素的指针。
+
+1.cur_name = names; 和 cur_age = ages;
+这两行代码的意思是将cur_name和cur_age两个指针分别指向names和ages数组的第一个元素。在C语言中，这等同于将指针设置为数组的起始地址。
+
+2. (cur_age - ages) &lt; count;
+
+这个条件判断当前cur_age指针是否还在ages数组的范围内。在C语言中，指针相减可以得到两个指针之间的元素个数。例如，如果cur_age和ages都指向同一个数组，那么cur_age - ages的结果就是当前指针位置在数组中的索引。所以，这个条件判断的意思是：当cur_age指向的元素还在ages数组内时，循环继续执行。
+
+3. cur_name++, cur_age++
+
+这两行代码的意思是在每次循环结束后，将cur_name和cur_age指针向前移动一个位置，指向下一个元素。这样，在下一次循环中，它们将访问数组中的下一个元素。
+</code></pre>
+<blockquote>
+<p>实用的指针用法
+你可以用指针做下面四个最基本的操作：</p>
+<ul>
+<li>向OS申请一块内存，并且用指针处理它。这包括字符串，和一些你从来没见过的东西，比如结构体。</li>
+<li>通过指针向函数传递大块的内存（比如很大的结构体），这样不必把全部数据都传递进去。</li>
+<li>获取函数的地址用于动态调用。对一块内存做复杂的搜索，比如，转换网络套接字中的字节，或者解析文件。</li>
+<li>对一块内存做复杂的搜索，比如，转换网络套接字中的字节，或者解析文件。</li>
+</ul>
+<p>指针词库</p>
+<ul>
+<li>type *ptr</li>
+</ul>
+<p>type类型的指针，名为ptr。</p>
+<ul>
+<li>*ptr</li>
+</ul>
+<p>ptr所指向位置的值。</p>
+<ul>
+<li>*(ptr + i)</li>
+</ul>
+<p>（ptr所指向位置加上i）的值。</p>
+<p>译者注：以字节为单位的话，应该是ptr所指向的位置再加上sizeof(type) * i。</p>
+<ul>
+<li>&amp;thing</li>
+</ul>
+<p>thing的地址。</p>
+<ul>
+<li>type *ptr = &amp;thing</li>
+</ul>
+<p>名为ptr，type类型的指针，值设置为thing的地址。</p>
+<ul>
+<li>ptr++</li>
+</ul>
+<p>自增ptr指向的位置。
+</p>
+<p>指针并不是数组
+无论怎么样，你都不应该把指针和数组混为一谈。它们并不是相同的东西，即使C让你以一些相同的方法来使用它们。例如，如果你访问上面代码中的sizeof(cur_age)，你会得到指针的大小，而不是它指向数组的大小。如果你想得到整个数组的大小，你应该使用数组的名称age，就像第12行那样。
+</p>
+</blockquote>
+<h3 id="16">练习16</h3>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;assert.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+struct Person {
+    char *name;
+    int age;
+    int height;
+    int weight;
+};//这里定义了一个名为Person的结构体。这个结构体有四个成员：一个指向字符的指针name，以及三个整型成员age、height和weight。这表示一个人有名字、年龄、身高和体重四个属性。
+
+struct Person *Person_create(char *name, int age, int height, int weight)
+{
+    struct Person *who = malloc(sizeof(struct Person));//// 分配内存给Person结构体
+    assert(who != NULL);// 断言检查内存是否成功分配 
+
+    who-&gt;name = strdup(name);// 为名字分配内存并复制字符串  
+    who-&gt;age = age;// 设置年龄属性  
+    who-&gt;height = height;// 设置身高属性  
+    who-&gt;weight = weight; //设置体重属性  
+
+    return who;// 返回指向新创建的Person对象的指针  
+}//这个函数用于创建一个新的Person对象。它首先使用malloc为Person结构体分配内存，然后使用strdup为名字分配内存并复制字符串。接下来，它设置对象的属性，并返回指向新创建的对象的指针。如果任何步骤失败（例如，内存分配失败），则assert将触发一个错误并终止程序。
+
+void Person_destroy(struct Person *who)  
+{  
+    assert(who != NULL);  // 断言检查对象是否非空  
+
+    free(who-&gt;name);  // 释放名字的内存  
+    free(who);  // 释放Person对象的内存  
+}//这个函数用于释放由Person_create函数分配的内存。它首先检查对象是否非空，然后释放名字的内存和Person对象的内存。同样，如果对象为NULL，则断言将触发一个错误并终止程序。
+
+void Person_print(struct Person *who)  
+{  
+    printf(&quot;Name: %s\n&quot;, who-&gt;name);  // 打印名字  
+    printf(&quot;\tAge: %d\n&quot;, who-&gt;age);  // 打印年龄  
+    printf(&quot;\tHeight: %d\n&quot;, who-&gt;height);  // 打印身高  
+    printf(&quot;\tWeight: %d\n&quot;, who-&gt;weight);  // 打印体重  
+}//这个函数用于打印Person对象的所有属性。它使用printf函数来显示名字、年龄、身高和体重。注意，这里使用了制表符\t来对输出进行格式化。
+
+int main(int argc, char *argv[])
+{
+    // make two people structures
+    struct Person *joe = Person_create(
+            &quot;Joe Alex&quot;, 32, 64, 140);
+
+    struct Person *frank = Person_create(
+            &quot;Frank Blank&quot;, 20, 72, 180);
+
+    // print them out and where they are in memory
+    printf(&quot;Joe is at memory location %p:\n&quot;, joe);
+    Person_print(joe);
+
+    printf(&quot;Frank is at memory location %p:\n&quot;, frank);
+    Person_print(frank);
+
+    // make everyone age 20 years and print them again
+    joe-&gt;age += 20;
+    joe-&gt;height -= 2;
+    joe-&gt;weight += 40;
+    Person_print(joe);
+
+    frank-&gt;age += 20;
+    frank-&gt;weight += 20;
+    Person_print(frank);
+
+    // destroy them both so we clean up
+    Person_destroy(joe);
+    Person_destroy(frank);
+
+    return 0;
+}//在主函数中，首先创建了两个Person对象（Joe和Frank），并使用Person_print函数打印出他们的信息。然后使每个人的年龄增加20岁，并更新其他属性。最后，使用Person_destroy函数销毁这两个对象，以释放分配给他们的内存。
+</code></pre>
+<blockquote>
+<p>x-&gt;y是(*x).y的简写。</p>
+</blockquote>
+<p>这段代码用于创建一个Person结构体来表示一个人，包括名字、年龄、身高和体重。该程序包括以下部分：</p>
+<p>定义结构体：定义了一个名为Person的结构体，包含四个成员变量：一个指向字符的指针name，表示名字；三个整型变量age、height和weight，分别表示年龄、身高和体重。</p>
+<p>创建结构体：Person_create函数用于创建一个新的Person结构体。它接收一个名字、年龄、身高和体重作为参数，并动态分配内存来存储这些信息。该函数返回一个指向新创建的Person结构体的指针。</p>
+<p>销毁结构体：Person_destroy函数用于释放由Person_create函数分配的内存。它接收一个指向Person结构体的指针，并释放该结构体和其成员变量所占用的内存。</p>
+<p>打印结构体：Person_print函数用于打印Person结构体的信息。它接收一个指向Person结构体的指针，并打印出该结构体的所有成员变量的值。</p>
+<p>主函数：在主函数中，首先使用Person_create函数创建两个Person结构体，然后打印出它们的内存地址以及它们的成员变量的值。接着，让这两个人的年龄增加20岁，身高减少2厘米，体重增加40磅和20磅，并再次打印出他们的信息。最后，使用Person_destroy函数销毁这两个结构体以释放内存。</p>
+<p>这个程序演示了如何使用C语言中的结构体和动态内存分配来创建和操作对象。注意，这个程序使用了断言(assert)来检查内存分配是否成功，如果内存分配失败（例如，由于内存不足），则程序会立即终止。</p>
+<p>在这段代码中，包含了三个C语言标准库的头文件：<assert.h>、<stdlib.h> 和 <string.h>。这些头文件为C程序提供了各种常用的功能和宏定义。</p>
+<p><strong>"<assert.h>"：</strong>
+<strong>这个头文件提供了assert宏，用于在调试时检查程序中的断言（条件）。如果断言失败（即条件为假），则程序会在该点终止，并显示一条包含文件名和行号的错误消息。assert通常用于捕获那些“这绝对不可能发生”的情况。如果发生了，就意味着程序中有错误。</strong></p>
+<p>"<stdlib.h>"：
+这个头文件包含了一系列关于程序通用工具函数的声明，例如内存分配、随机数生成、系统退出等。
+在代码中，这个头文件是必需的，因为它声明了malloc和free函数，这两个函数用于动态内存管理。</p>
+<p>"<string.h>"：
+这个头文件包含了一系列处理C风格字符串（即字符数组）的函数。例如，字符串拷贝（strcpy）、字符串连接（strcat）、字符串比较（strcmp）以及字符串长度计算（strlen）等。
+在代码中，<string.h> 是为了使用 strdup 函数，这个函数会分配足够的内存来容纳一个新的字符串，并将一个已存在的字符串复制到新分配的内存中。</p>
+<pre><code>malloc是C语言中的一个标准库函数，用于动态内存分配。当你在程序中需要一块内存，但不知道需要多少，或者需要在运行时确定内存的大小时，可以使用malloc。
+
+malloc函数从堆中分配指定字节数的未初始化的内存，并返回一个指向它的指针。如果分配成功，则返回非空指针；如果分配失败，则返回NULL。
+
+使用malloc的例子：
+
+#include &lt;stdio.h&gt;  
+#include &lt;stdlib.h&gt;  
+
+int main() {  
+    int *ptr = (int*) malloc(sizeof(int));  // 为一个int分配内存  
+    if (ptr == NULL) {  
+        printf(&quot;Memory allocation failed!\n&quot;);  
+        return 1;  // 返回错误代码  
+    }  
+    *ptr = 10;  // 存储值10到这块内存中  
+    printf(&quot;Value of ptr: %d\n&quot;, *ptr);  // 打印值10  
+    free(ptr);  // 释放内存  
+    return 0;  
+}
+注意：使用malloc分配的内存必须手动释放，使用free函数。否则会导致内存泄漏。
+</code></pre>
+<pre><code>结构体（struct）是一个用户定义的数据类型，它允许将多个不同的数据项组合到一个单一的变量中。通过结构体，可以创建包含多个不同类型数据的复杂数据结构。
+
+定义结构体：
+
+定义一个结构体的一般语法如下：
+
+struct 结构体名称 {  
+    成员类型1 成员名称1;  
+    成员类型2 成员名称2;  
+    ...  
+    成员类型N 成员名称N;  
+};//不可以漏掉分号
+
+例如，如果我们想创建一个结构体来存储一个人的信息，我们可以这样定义：
+
+struct Person {  
+    char name[50];  
+    int age;  
+    float height;  
+};
+这个结构体定义了一个名为Person的结构体类型，它有三个成员：一个字符数组name、一个整数age和一个浮点数height。
+
+使用结构体：
+
+一旦定义了结构体，您就可以创建该类型的变量并为其成员赋值。例如：
+
+struct Person john;  // 创建一个Person类型的变量john  
+john.age = 25;  // 为john的age成员赋值  
+strcpy(john.name, &quot;John Doe&quot;);  // 使用strcpy函数为john的name成员赋值  
+john.height = 1.75;  // 为john的height成员赋值
+
+注意事项：
+结构体的主要用途是组织不同类型的数据，使它们成为一个整体。
+当您为结构体成员赋值时，需要使用.运算符来访问该成员。
+您可以使用sizeof运算符来获取结构体的大小。例如：sizeof(john)将返回整个结构体的大小（以字节为单位）。
+</code></pre>
+<pre><code>strdup 是一个 C 语言库函数，用于复制一个字符串。它的原型是：
+
+char *strdup(const char *s);
+这个函数会返回一个指向新分配的字符串的指针，这个字符串是 s 的一个副本。新字符串的内存空间是通过 malloc 分配的，因此需要使用 free 来释放。
+
+下面是一个使用 strdup 的简单示例：
+
+#include &lt;stdio.h&gt;  
+#include &lt;string.h&gt;  
+#include &lt;stdlib.h&gt;  
+
+int main() {  
+    const char *original = &quot;Hello, World!&quot;;  
+    char *copy = strdup(original);  
+    if (copy != NULL) {  
+        printf(&quot;Original: %s\n&quot;, original);  
+        printf(&quot;Copy: %s\n&quot;, copy);  
+        free(copy);  // 释放内存  
+    } else {  
+        printf(&quot;strdup failed to allocate memory.\n&quot;);  
+    }  
+    return 0;  
+}
+注意：在使用 strdup 时，必须确保在不再需要复制的字符串时调用 free 来释放内存，以避免内存泄漏。
+</code></pre>
+<h3 id="17">练习17</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-现在 zrq
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/zrqiq" target="_blank" rel="noopener" title="GitHub | zrqiq" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+    
+  </body>
+</html>

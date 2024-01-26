@@ -1,0 +1,1645 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../q/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>Linux - zzzengrqi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../mkdocs/css/no-footer.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="http://haohaha.cn" title="zzzengrqi" class="md-header__button md-logo" aria-label="zzzengrqi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zzzengrqi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  学习记录
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../years/sb/" class="md-tabs__link">
+          
+  
+    
+  
+  发疯日常
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../friends/" class="md-tabs__link">
+        
+  
+    
+  
+  友链
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="http://haohaha.cn" title="zzzengrqi" class="md-nav__button md-logo" aria-label="zzzengrqi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    zzzengrqi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    学习记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linuxlinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      首先明白Linux入门不是学“Linux”  而是
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux 是一个操作系统 其分为四个部分
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnulinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNU/Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux内核
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnu" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNU组织
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gli-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLI shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux  GUI发展历史
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 系列命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd 系列命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Linux 终端的特殊命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      绝对路径和相对路径
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp  命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端光标移动技巧
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      !$
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询文件命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户的含义和作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      任务管理器
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../q/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入门书籍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    发疯日常
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            发疯日常
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../years/sb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../years/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../friends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    友链
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linuxlinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      首先明白Linux入门不是学“Linux”  而是
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux 是一个操作系统 其分为四个部分
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnulinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNU/Linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux内核
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gnu" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNU组织
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gli-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLI shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux  GUI发展历史
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      ls 系列命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      cd 系列命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      在Linux 终端的特殊命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      绝对路径和相对路径
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      touch 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp  命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端光标移动技巧
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      链接文件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      !$
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      rm 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir 命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询文件命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境变量
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户的含义和作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      任务管理器
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="linux">Linux</h1>
+<blockquote>
+<p>Linux 应该叫GNU/Linux  </p>
+</blockquote>
+<h3 id="linuxlinux">首先明白Linux入门不是学“Linux”  而是</h3>
+<p>1.体验：比较和其他系统的不同点和相同点</p>
+<p>2.Linux GUI - &gt; Shell</p>
+<blockquote>
+<p>GUI可理解为桌面程序</p>
+</blockquote>
+<hr />
+<h3 id="linux_1">Linux 是一个操作系统 其分为四个部分</h3>
+<p>1.Linux kernel(内核)</p>
+<p>2.GNU工具</p>
+<p>3.GUI Desktop环境</p>
+<p>4.Application应用</p>
+<hr />
+<h3 id="gnulinux">GNU/Linux</h3>
+<p><img alt="1" src="../1/1.jpg" /></p>
+<hr />
+<h3 id="linux_2">Linux内核</h3>
+<p>1.硬件设备管理使用</p>
+<p>2.软件程序（系统）-------&gt;操作软件</p>
+<p>3.系统内存</p>
+<p>4.文件管理（保存文件，删除文件，修改文件......）</p>
+<hr />
+<h3 id="_1">文件系统</h3>
+<p>读，写的标准</p>
+<blockquote>
+<p>不同文件系统有不同的读写标准</p>
+</blockquote>
+<pre><code>Windows常用文件系统类型：NTFS
+Linux常用文件系统类型：ext,ext2,ext3,ext4(最常用),hpfs,iso9660,JFS,minix,msdos,ncpfs,nfs,ntfs,proc,Reiserfs,smb,sysv,umsdos,vfat(通常是引导使用),XFS,xiafs
+(去企业面试可能会被问)
+</code></pre>
+<hr />
+<h3 id="gnu">GNU组织</h3>
+<p>Unix上具有的一些软件，Linux内核本身没有，所以GNU他们模仿Unix,为Linux写了一些必要的软件</p>
+<ul>
+<li>GNU核心：</li>
+</ul>
+<p>原本在Unix上的一些命令和工具，被模仿（移植）到了Linux上。</p>
+<p>供Linux使用的这套工具：coreutils</p>
+<p>coreutilities软件包：</p>
+<p>1.用来处理文本的工具</p>
+<p>2.用来操作文本的工具</p>
+<p>3.用来管理进程的工具</p>
+<ul>
+<li>shell </li>
+</ul>
+<p>shell提供给用户使用的软件：用户拿它来使用电脑，并且和电脑交互。</p>
+<p>命令行壳层提供一个命令行界面（CLI）;而图形壳层提供一个图形用户界面（GUI）。</p>
+<p>即Shell分为两大类：</p>
+<p>1.图形界面Shell  (GUI Shell)</p>
+<p>2.命令行界面Shell (GLI Shell)</p>
+<p>linux shell---&gt;CLI    Command-Line-Interface</p>
+<hr />
+<h3 id="gli-shell">GLI shell</h3>
+<p>bash shell   基础shell</p>
+<p>zsh(包含ash,korn,tcsh)</p>
+<blockquote>
+<p>MacOS（苹果系统）-----&gt;Unix专业人选择</p>
+</blockquote>
+<hr />
+<h3 id="linux-gui">Linux  GUI发展历史</h3>
+<p>1.X Windows</p>
+<p>2.KDE(windows,MacOS使用系统)</p>
+<p>3.GNOME</p>
+<p>4.Unity</p>
+<hr />
+<h3 id="shell">shell</h3>
+<blockquote>
+<p>输入一条命令后按回车</p>
+<p>$ 表示当前要输入命令了</p>
+</blockquote>
+<p>入门命令：</p>
+<pre><code>ls 显示当前目录所有文件夹（不包括隐藏文件夹）
+
+ls -a 显示带点的隐藏文件
+
+</code></pre>
+<hr />
+<h3 id="_2">终端</h3>
+<p>zrq @ q ：~ $ 的含义</p>
+<p>用户名@机器名 当前所在目录 等待用户输入</p>
+<ul>
+<li>
+<p>@ 前是用户名</p>
+</li>
+<li>
+<p>@ 后是机器命（计算机名）</p>
+</li>
+<li>
+<p>~ 代表用户home目录</p>
+</li>
+<li>
+<p>$ 表示等待用户输入</p>
+</li>
+</ul>
+<hr />
+<h3 id="ls">ls 系列命令</h3>
+<blockquote>
+<p>ls命令 就是list的缩写，用来显示目标列表，在Linux中是使用率较高的命令。ls命令的输出信息可以进行彩色加亮显示，以分区不同类型的文件</p>
+</blockquote>
+<p>最常用的命令</p>
+<pre><code>$ ls       # 仅列出当前目录可见文件
+$ ls -l    # 列出当前目录可见文件详细信息
+$ ls -hl   # 列出详细信息并以可读大小显示文件大小
+$ ls -al   # 列出所有文件（包括隐藏）的详细信息
+$ ls --human-readable --size -1 -S --classify # 按文件大小排序
+$ du -sh * | sort -h # 按文件大小排序(同上)
+</code></pre>
+<p>如何了解更多ls命令：</p>
+<p>1.使用 man 了解更多（对英语要求比较高）</p>
+<p>2.进入官方网站查询(非常靠谱)</p>
+<p><a href="http://wangchujiang.com/linux-command/">http://wangchujiang.com/linux-command/</a></p>
+<p>补充两个清屏办法：</p>
+<p>1.Ctrl+L</p>
+<p>2.输入clear命令</p>
+<hr />
+<blockquote>
+<p>Linux一切皆文件</p>
+</blockquote>
+<pre><code>/ 根目录
+/home 主目录，显示所有用户目录
+/bin 二进制目录 GNU工具 ls等自带的命令
+存放许多用户级
+/cdrom 光盘
+/etc 系提供配置文件目录
+/lib 库目录
+/lost+found 找回因突发事件而丢失的文件
+/mnt 挂载目录
+挂载-----外在的设备和电脑进行连接 U盘
+/proc 伪文件系统
+/tmp 临时目录
+/var 可变目录  log
+/boot 启动目录
+/dev 设备目录
+/media 媒体目录（mp3,mp4之类的。和mnt挂载目录很像，但是有区别）
+/opt 可选目录
+/root root用户的主目录 管理员
+/sbin 系统二进制目录，GNU高级管理员使用的命令工具
+/srv 服务目录 本地服务
+/usr 用户二进制目录，GNU工具
+
+FHS
+文件系统层级标准
+</code></pre>
+<hr />
+<h3 id="cd">cd 系列命令</h3>
+<blockquote>
+<p>切换用户当前工作目录。</p>
+</blockquote>
+<p>.表示当前目录</p>
+<p>..表示当前目录的上一级目录(父级目录)</p>
+<p>pwd输出当前在哪个目录（输出绝对路径）</p>
+<pre><code>cd    # 进入用户主目录；
+cd /  # 进入根目录
+cd ~  # 进入用户主目录；
+cd ..  # 返回上级目录（若当前目录为“/“，则执行完后还在“/&quot;；&quot;..&quot;为上级目录的意思）；
+cd ../..  # 返回上两级目录；
+</code></pre>
+<hr />
+<h3 id="linux_3">在Linux 终端的特殊命令</h3>
+<ul>
+<li>
+<p>ctrl+c 表示强制退出错误命令</p>
+</li>
+<li>
+<p>ctrl+shift+c 表示复制</p>
+</li>
+<li>
+<p>ctrl+shift+v 表示粘贴</p>
+</li>
+<li>
+<p>在Linux 终端中不支持剪贴</p>
+</li>
+</ul>
+<hr />
+<h3 id="_3">绝对路径和相对路径</h3>
+<p>1.绝对路径</p>
+<p>D:\Linux\2K版\000.Linux初步认识\系统的认识.ev4</p>
+<p>盘符:\文件夹\ ...\文件名.文件后缀</p>
+<p>特点：全，精确</p>
+<p>2.相对路径</p>
+<blockquote>
+<p>一定要有故事背景前提，即你在哪？</p>
+</blockquote>
+<pre><code>举个例子便于理解
+假如朋友的地址在地球亚洲中国北京市海淀区双清路30号
+而你要去朋友那里，朋友会告诉你他的地址，那么首先你要确定自己的位置
+1.假如你在北京市
+你的朋友会告诉你他的地址：海淀区双清路30号
+2.假如你在上海市
+你的朋友会告诉你他的地址：北京市海淀区双清路30号
+3.假如你在菲律宾
+你的朋友会告诉你他的地址：中国北京市海淀区双清路30号
+4.假如你在美国
+你的朋友会告诉你他的地址：亚洲中国北京市海淀区双清路30号
+</code></pre>
+<p>我所理解的就是层级关系不同，相对路径不同。</p>
+<p>假如我要进入到 D:\Linux\2K版\000.Linux初步认识\系统的认识.ev4（绝对路径）</p>
+<p>我现在在 D:\Linux\2K版 这个位置</p>
+<p>那么我的相对路径为\000.Linux初步认识\系统的认识.ev4</p>
+<hr />
+<h3 id="touch">touch 命令</h3>
+<blockquote>
+<p>touch命令 有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建新的空文件。</p>
+</blockquote>
+<pre><code>touch ex2
+在当前目录下建立一个空文件ex2
+
+touch file{1..5}.txt
+
+批量创建文件
+</code></pre>
+<hr />
+<h3 id="cp">cp  命令</h3>
+<blockquote>
+<p>建议新手强制加上-i</p>
+</blockquote>
+<p>cp用法：cp 源文件 目标文件（cp 你想复制的文件 你想复制到哪）</p>
+<ul>
+<li>源文件：制定源文件列表。</li>
+<li>目标文件：指定目标文件。</li>
+</ul>
+<p>默认情况下，cp命令不能复制目录，如果要复制目录，则必须使用-R选项</p>
+<pre><code>-i：覆盖既有文件之前先询问用户；
+-R/r：递归处理，将指定目录下的所有文件与子目录一并处理
+</code></pre>
+<p>如果把一个文件复制到一个目标文件中，而目标文件已经存在，那么，该目标文件的内容将被破坏。(覆盖性)</p>
+<p>此命令中所有参数既可以是绝对路径名，也可以是相对路径名。通常会用到点.或点点..的形式。</p>
+<p>所有目标文件指定的目录必须是己经存在的，cp命令不能创建目录。如果没有文件复制的权限，则系统会显示出错信息。</p>
+<blockquote>
+<p>cp 既可以复制文件，也可以复制文件夹</p>
+</blockquote>
+<hr />
+<h3 id="_4">终端光标移动技巧</h3>
+<ul>
+<li>Tab键 偷懒神键 自动补全 </li>
+<li>ctrl+左右键 跳动命令上的光标</li>
+<li>ctrl+左键  跳动光标到上一个命令单词词首 </li>
+<li>ctrl+右键  跳动光标到下一个命令单词词首 ctrl+A 跳动光标到命令开头 </li>
+<li>ctrl+E 跳动光标到命令结尾 </li>
+<li>ctrl+H 删除光标所在字母 </li>
+<li>ctrl+U 删除光标前的所有命令（通常用作删除一整行命令） </li>
+<li>ctrl+K 删除光标后的所有命令</li>
+</ul>
+<hr />
+<h3 id="_5">链接文件</h3>
+<p>链接文件分为两种：符号链接（软连接）和硬链接     （面试的时候可能会被问）</p>
+<ul>
+<li>Windows
+  快捷方式（.lnk）
+  .lnk 链接文件</li>
+<li>Linux里边
+  链接文件
+  1.符号链接（软链接）——类似于Windows里边的快捷方式
+  2.硬链接
+  类似于Windows里边创建副本</li>
+</ul>
+<p><strong>运用要求：原来的文件或文件夹必须是存在的</strong></p>
+<pre><code>ln -s创建软连接
+ln 创建硬链接（硬链接只能在一个介质里边，有多个硬盘时 不太好使）
+</code></pre>
+<blockquote>
+<p>如果用cp命令复制一个软链接会怎么样?</p>
+<p>复制的不是一个文件，而是一个快捷方式（类似于发快捷方式给别人）</p>
+</blockquote>
+<hr />
+<h3 id="mv">mv 命令</h3>
+<blockquote>
+<p>用来对文件或目录重新命名</p>
+</blockquote>
+<pre><code>重命名文件
+
+mv file_1.txt file_2.txt # 将文件file_1.txt改名为file_2.txt
+</code></pre>
+<blockquote>
+<p>将文件从一个目录移到另一个目录中</p>
+</blockquote>
+<p>如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。</p>
+<p>注意事项：mv与cp的结果不同，mv好像文件“搬家”，文件个数并未增加。而cp对文件进行复制，文件个数增加了。</p>
+<pre><code>移动文件
+
+mv file_1.txt /home/office/
+</code></pre>
+<hr />
+<h3 id="_6">!$</h3>
+<ul>
+<li>执行上一条命令最后一个路径</li>
+</ul>
+<hr />
+<h3 id="rm">rm 命令</h3>
+<blockquote>
+<p>用于删除给定的文件和目录</p>
+</blockquote>
+<p>注意：使用rm命令要格外小心。因为一旦删除了一个文件，就无法再恢复它。所以，在删除文件之前，最好再看一下文件的内容，确定是否真要删除。</p>
+<p>建议加上-i，-i：删除已有文件或目录之前先询问用户</p>
+<pre><code>-d：直接把欲删除的目录的硬连接数据删除成0，删除该目录；
+-f：强制删除文件或目录；
+-i：删除已有文件或目录之前先询问用户；
+-r或-R：递归处理，将指定目录下的所有文件与子目录一并处理；
+</code></pre>
+<ul>
+<li>rm -rf /*   危险！        #删除根目录下所有文件</li>
+<li>sudo rm -rf /*   非常危险！        #以管理员身份删除根目录下所有文件（蹲大牢）</li>
+</ul>
+<p>2023.12.3 故障</p>
+<p>不小心把文件remove（永久删除）了怎么办？</p>
+<p>下面以我的博客文件为例，来告诉大家该如何修复</p>
+<pre><code>首先在之前放置博客文件的文件夹下面新建一个博客文件夹，然后进去，进去之后打开终端执行两条命令（以我的为例）
+
+git clone [git@github.com:](mailto:git@github.com:)zrqiq/zrqiq.git
+
+git clone [git@github.com:](mailto:git@github.com:)zrqiq/zrq-blog.git
+
+这样两个文件夹就都下载回来了（zrqiq和zrq-blog）
+
+但是还得配置一下
+
+在zrq-blog文件夹下：
+
+- git remote add blog [git@github.com:](mailto:git@github.com:)zrqiq/zrq-blog.git
+- git config --global user.email &quot;这里写你的邮箱&quot;
+- git config --global user.name &quot;这里写你github的用户名&quot;
+
+在zrqiq文件夹下：
+
+- cp ../zrqiq-blog/auto-update-this-repo.sh ./
+- git remote add zrqiq [git@github.com:](mailto:git@github.com:)zrqiq/zrqiq.git
+- git config --global user.email &quot;这里写你的邮箱&quot;
+- git config --global user.name &quot;这里写你github的用户名&quot;
+- 最后打开文件夹内的auto-update-this-repo.sh文件，将最后一行的blog改为zrqiq
+
+</code></pre>
+<p>然后就ok了！感谢我学长！！！（大家别轻易尝试，对心脏不好）</p>
+<hr />
+<h3 id="mkdir">mkdir 命令</h3>
+<blockquote>
+<p>make directories</p>
+</blockquote>
+<p>mkdir命令 用来创建目录。</p>
+<pre><code>-p或--parents 若所要建立目录的上层目录目前尚未建立，则会一并建立上层目录；
+</code></pre>
+<hr />
+<h3 id="_7">查询文件命令</h3>
+<ul>
+<li>file</li>
+</ul>
+<blockquote>
+<p>用来探测给定文件的类型</p>
+</blockquote>
+<ul>
+<li>cat</li>
+</ul>
+<blockquote>
+<p>显示文件内容</p>
+</blockquote>
+<ul>
+<li>more</li>
+</ul>
+<blockquote>
+<p>显示文件内容，每次显示一屏</p>
+</blockquote>
+<p>该命令一次显示一屏文本，满屏后停下来，并且在屏幕的底部出现一个提示信息，给出至今己显示的该文件的百分比：--More--（XX%）可以用下列不同的方法对提示做出回答</p>
+<pre><code>按 Space 键：显示文本的下一屏内容。
+按 Enter 键：只显示文本的下一行内容。
+按斜线符|：接着输入一个模式，可以在文本中寻找下一个相匹配的模式。
+按H键：显示帮助屏，该屏上有相关的帮助信息。
+按B键：显示上一屏内容。
+按Q键：退出more命令。
+</code></pre>
+<ul>
+<li>less</li>
+</ul>
+<blockquote>
+<p>分屏上下翻页浏览文件内容</p>
+</blockquote>
+<p>ess命令 的作用与more十分相似，都可以用来浏览文字档案的内容，不同的是less命令允许用户向前或向后浏览文件，而more命令只能向前浏览。用less命令显示文件时，用PageUp键向上翻页，用PageDown键向下翻页。要退出less程序，应按Q键。</p>
+<pre><code>/字符串：向下搜索&quot;字符串&quot;的功能
+?字符串：向上搜索&quot;字符串&quot;的功能
+n：继续向后搜索
+N：向前搜索
+b: 向后翻一页
+d: 向后翻半页
+u: 向前滚动半页
+y: 向前滚动一行
+Q: 退出less 命令
+空格键: 滚动一页
+回车键: 滚动一行
+[pagedown]： 向下翻动一页
+[pageup]： 向上翻动一页
+G: 移动到最后一行
+g: 移动到第一行
+</code></pre>
+<ul>
+<li>tail</li>
+</ul>
+<blockquote>
+<p>在屏幕上显示指定文件的末尾若干行</p>
+</blockquote>
+<pre><code>tail -n number    #显示结尾后number行
+</code></pre>
+<ul>
+<li>head</li>
+</ul>
+<blockquote>
+<p>显示文件的开头部分，在未指定行数时默认显示前10行。</p>
+</blockquote>
+<pre><code>head -n number    #显示开头前number行
+</code></pre>
+<hr />
+<p>先不按顺序补一点点笔记吧</p>
+<h3 id="_8">环境变量</h3>
+<blockquote>
+<p>环境变量作用可以理解为预约 在任何地方都可以访问环境变量中的内容</p>
+</blockquote>
+<p>环境变量分为两种 用户变量和系统变量</p>
+<p>Linux当中一个叫全局变量一个叫局部变量 </p>
+<p>查看全局变量用printenv (env是环境变量的意思) </p>
+<p>echo输出 </p>
+<p>想使用环境变量时，在其前面加上$ </p>
+<p>局部变量只能在一个shell里边用，局部变量可以使用set查看 </p>
+<blockquote>
+<p>在编程的时候，局部变量使用广泛</p>
+<p>用户定义的变量，大多数都是局部变量 </p>
+</blockquote>
+<p>定义局部变量 </p>
+<ul>
+<li>变量名=“” 定义的局部变量，千万不能使用大写，全局变量的名是大写的，若有好几个单词就用下划线隔开</li>
+</ul>
+<p>定义用户全局变量 </p>
+<ul>
+<li>用小写，只有系统变量才使用大写 export  变量名=“    ” </li>
+</ul>
+<p>如何删除变量 </p>
+<p>使用unset 变量名  </p>
+<blockquote>
+<p>追加命令 PATH=$PATH：路径</p>
+</blockquote>
+<hr />
+<h3 id="_9">用户的含义和作用</h3>
+<p>用户ID------&gt;UID</p>
+<p>使用“cat /etc/passwd”命令可查看所有用户（注意cat 后必须有一个空格）</p>
+<pre><code>zrq:x:1000:1000:zrq,,,:/home/zrq:/bin/zsh
+&quot;zrq&quot;是用户名
+&quot;x&quot;是密码
+第一个&quot;1000&quot;是用户ID
+第二个&quot;1000&quot;是组ID
+······
+</code></pre>
+<p>UID小于500的都是系统账户（系统账户UID&lt;500）</p>
+<p>使用“sudo cat /etc/shadow”命令可以查看用户密码，但是是加密的</p>
+<h3 id="_10">任务管理器</h3>
+<p>在Linux中主要有三个命令可以查看进程：ps可以静态查看系统正在运行的进程，top则是动态查看进程和服务器的健康状况，而pstree命令主要用于查看进程树。</p>
+<pre><code>在Linux中，可以使用命令行工具来管理进程和杀死进程。常用的命令有：
+1.ps命令：用于查看当前运行的进程。可以使用ps命令的不同选项来显示不同的信息，例如ps aux可以显示所有进程的详细信息。
+2.top命令；用于动态地查看系统的进程和资源使用情况。top命令会实时更新进程的CPU使用率、内存使用率等信息。
+3.kill命令：用于终止指定的进程。可以使用kill命令的不同选项来向进程发送不同的信号，例如kill-9可以强制终止进程。
+4.pkill命令：用于根据进程名杀死进程。可以使用pkill命令的不同选项来指定匹配的进程名。
+5.killall命令：用于根据进程名杀死进程。与pkill不同的是kilall命令会杀死所有匹配的进程。
+相关问题
+</code></pre>
+<p>挂载</p>
+<blockquote>
+<p>linux操作系统将所有的设备都看作文件，它将整个计算机的资源都整合成一个大的文件目录。我们要访问存储设备中的文件，必须将文件所在的分区挂载到一个已存在的目录上，然后通过访问这个目录来访问存储设备。挂载就是把设备放在一个目录下，让系统知道怎么管理这个设备里的文件，了解这个存储设备的可读写特性之类的过程</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023-现在 zrq
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/zrqiq" target="_blank" rel="noopener" title="GitHub | zrqiq" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+    
+  </body>
+</html>
